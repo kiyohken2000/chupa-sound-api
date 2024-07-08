@@ -4,7 +4,7 @@ import base64
 
 # APIにリクエストを送信
 url = "https://chupa-api-omc3n2et7a-an.a.run.app/generate_sound"
-payload = {"text": "わかりました……ではこのまま……んっ……ちゅっ……れろっ……んちゅっ……"}
+payload = {"text": "やっぱり……ゆりこ……いろけ……やべえよ……せんきょ……そくほう……みながら……しこってる"}
 headers = {"Content-Type": "application/json"}
 
 try:
