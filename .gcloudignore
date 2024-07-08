@@ -1,0 +1,10 @@
+LICENSE
+README.md
+.git
+.gitignore
+.DS_Store
+commands.txt
+__pycache__
+test.py
+*.wav
+*.mp4
