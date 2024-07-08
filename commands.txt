@@ -25,3 +25,21 @@ gcloud builds submit --tag gcr.io/hey-abe/chupa-api --project hey-abe
 ## アップロードされるファイルの確認
 gcloud meta list-files-for-upload
 ```
+
+## テスト用
+
+ランダムでチュパテキストを生成
+
+```
+curl -X GET https://chupa-api-omc3n2et7a-an.a.run.app/generate_random
+```
+
+チュパ音声の生成
+
+```
+curl -X POST -H "Content-Type: application/json" -d '{"text":"わかりました……ではこのまま……んっ……ちゅっ……れろっ……んちゅっ……"}' https://chupa-api-omc3n2et7a-an.a.run.app/generate_sound
+```
+
+```
+python test_generate_video.py
+```

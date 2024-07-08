@@ -6,7 +6,7 @@ from generate import get_random_chupa, generate_video
 app = Flask(__name__)
 CORS(app)
 
-@app.route('/generate_random', methods=['POST'])
+@app.route('/generate_random', methods=['GET'])
 def generate_random():
   try:
     print('generate_random 関数の開始')
@@ -39,7 +39,7 @@ def generate_sound():
     video_base64 = generate_video(prompt=received_text)
 
     # 結果の出力
-    response = jsonify({'video_result': "sound_output"})
+    response = jsonify({'video_result': video_base64})
     
     return response, 200
 
