@@ -43,3 +43,15 @@ curl -X POST -H "Content-Type: application/json" -d '{"text":"わかりました
 ```
 python test_generate_video.py
 ```
+
+## レポジトリの作成
+
+```
+gcloud artifacts repositories create mygpt-repo --repository-format=docker --location=asia-northeast1 --description="Docker repository"
+```
+
+## アップロード
+
+```
+gcloud builds submit --tag asia-northeast1-docker.pkg.dev/hey-abe/mygpt-repo/chupa-api --project hey-abe
+```
